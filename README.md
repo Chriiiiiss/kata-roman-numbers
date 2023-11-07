@@ -6,6 +6,9 @@ Comment transformer un nombre arabe en représentation romaine ?
 
 # How to use ?
 
+> [!warning]
+> It only work with the number 1 and 5 for now
+
 Using node
 
 ```bash
