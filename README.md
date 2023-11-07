@@ -4,6 +4,14 @@
 
 Comment transformer un nombre arabe en représentation romaine ?
 
+# How to use ?
+
+Using node
+
+```bash
+node RomanNumbers.js [number]
+```
+
 # Cycle de vie
 
 Pour l'instant nous utilisons la méthode Kanban, et pour le développement nous allons faire du TDD
