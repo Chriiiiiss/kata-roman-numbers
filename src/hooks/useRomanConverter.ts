@@ -1,5 +1,10 @@
 export function useRomanConverter(userInput: number | string) {
   let romanoNumbers = "";
+
+  if (!Number.isInteger(Number(userInput))) {
+    return;
+  }
+
   let userInputFiltered = isNaN(Number(userInput))
     ? String(userInput).toUpperCase()
     : Number(userInput);

@@ -6,5 +6,8 @@ export function checkInputChars(inputStr: string): boolean {
       return false;
     }
   }
+  if (Number(inputStr) % 1 !== 0) {
+    return false;
+  }
   return true;
 }
