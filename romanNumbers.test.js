@@ -33,6 +33,7 @@ test("should transform 40 to roman XL", () => {
 });
 
 test("should transform 60 to roman LX", () => {
+
   expect(mutateNumberToRoman(60)).toBe("LX");
 });
 
