@@ -1,10 +1,12 @@
 function mutateNumberToRoman(number) {
   if (number === 1) {
     console.log("I");
+    return "I";
   } else if (number === 5) {
     console.log("V");
+    return "V";
   } else {
-    console.log("It only works for 1 and 5 for now");
+    return "No";
   }
 }
 
@@ -17,4 +19,4 @@ function main([arg]) {
   }
 }
 
-main(process.argv.slice(2));
+module.exports = mutateNumberToRoman;
