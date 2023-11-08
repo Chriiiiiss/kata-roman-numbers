@@ -38,9 +38,7 @@ function InputRoman() {
     return () => clearTimeout(delayInputTimeoutId);
   }, [userInput]);
 
-  const romanoConvertedNumber = useRomanConverter(
-    Number(debouncedUserInputValue)
-  );
+  const romanoConvertedNumber = useRomanConverter(debouncedUserInputValue);
 
   return (
     <Card>
