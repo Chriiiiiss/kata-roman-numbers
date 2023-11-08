@@ -1,4 +1,4 @@
-function mutateNumberToRoman(number) {
+export default function mutateNumberToRoman(number) {
   let result = "";
 
   while (number > 0) {
@@ -45,5 +45,3 @@ function mutateNumberToRoman(number) {
   }
   return result;
 }
-
-module.exports = mutateNumberToRoman;
