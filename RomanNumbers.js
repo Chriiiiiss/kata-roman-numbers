@@ -27,7 +27,7 @@ function mutateNumberToRoman(number) {
       number = number%1;
     }
   }
-  console.log(result)
+  return result;
 }
 
 function main([arg]) {
