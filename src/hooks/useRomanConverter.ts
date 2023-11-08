@@ -1,7 +1,7 @@
 export function useRomanConverter(userInput: number | string) {
   let romanoNumbers = "";
 
-  if (!Number.isInteger(Number(userInput))) {
+  if (!isNaN(Number(userInput)) && !Number.isInteger(Number(userInput))) {
     return;
   }
 
