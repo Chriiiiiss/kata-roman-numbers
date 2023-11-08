@@ -29,10 +29,10 @@ test("should transform 50 to roman L", () => {
 });
 
 test("should transform 40 to roman XL", () => {
-  expect(mutateNumberToRoman(40)).toBe("L");
+  expect(mutateNumberToRoman(40)).toBe("XL");
 });
 
-test("should transform 60 to roman XL", () => {
+test("should transform 60 to roman LX", () => {
   expect(mutateNumberToRoman(60)).toBe("LX");
 });
 
@@ -45,7 +45,7 @@ test("should transform 500 to roman D", () => {
 });
 
 test("should transform 1000 to roman M", () => {
-  expect(mutateNumberToRoman(500)).toBe("M");
+  expect(mutateNumberToRoman(1000)).toBe("M");
 });
 
 test("should transform 634 to roman DCXXXIV", () => {
