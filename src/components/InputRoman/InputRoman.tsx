@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useRomanConverter } from "../../hooks/useRomanConverter";
 import { checkInputChars } from "../../utils/input";
+import { MAX_NUMBER } from "../../utils/constants";
 
 const Card = styled.div`
   background-color: blue;
@@ -18,7 +19,10 @@ function InputRoman() {
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    if (!isNaN(Number(value)) || checkInputChars(value.toUpperCase())) {
+    if (
+      (!isNaN(Number(value)) && Number(value) < MAX_NUMBER) ||
+      checkInputChars(value.toUpperCase())
+    ) {
       setUserInput(value);
       setInputError(false);
     } else {
