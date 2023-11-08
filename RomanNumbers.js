@@ -39,5 +39,4 @@ function main([arg]) {
   }
 }
 
-main(process.argv.slice(2));
-
+module.exports = mutateNumberToRoman;
