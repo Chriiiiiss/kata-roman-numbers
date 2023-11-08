@@ -1,4 +1,4 @@
-const mutateNumberToRoman = require("./RomanNumbers");
+const mutateNumberToRoman = require("./romanNumbers");
 
 test("should transform 1 to roman I", () => {
   expect(mutateNumberToRoman(1)).toBe("I");
@@ -33,7 +33,6 @@ test("should transform 40 to roman XL", () => {
 });
 
 test("should transform 60 to roman LX", () => {
-
   expect(mutateNumberToRoman(60)).toBe("LX");
 });
 

@@ -1,4 +1,4 @@
-const mutateNumberToRoman = require("./RomanNumbers");
+const mutateNumberToRoman = require("./romanNumbers");
 
 function main([arg]) {
   if (!Number.isInteger(Number(arg)) || Number(arg) === 0) {
