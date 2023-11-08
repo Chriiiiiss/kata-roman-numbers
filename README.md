@@ -1,8 +1,8 @@
-# Réalisation du Kata Roman Numerals
+# Producing Kata Roman Numerals
 
-# Problématique
+# Issues
 
-Comment transformer un nombre arabe en représentation romaine ?
+How to transform a Arabic number into a Roman representation ?
 
 # How to use ?
 
@@ -17,8 +17,8 @@ node RomanNumbers.js [number]
 
 # Cycle de vie
 
-Pour l'instant nous utilisons la méthode Kanban, et pour le développement nous allons faire du TDD
+For the moment we're using the Kanban method, and for development we're going to use TDD.
 
-## Liens Outils
+## Tools links
 
 Trello : [https://trello.com/invite/b/zQNnOfp2/ATTI1d5558b684fefc358f75db4bc359a5ea4CED8AB9/exercice-cycle-de-vie](link)
