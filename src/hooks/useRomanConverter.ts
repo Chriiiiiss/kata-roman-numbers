@@ -1,3 +1,15 @@
+type TRomanValue = Record<string, number>;
+
+const romanValues: TRomanValue = {
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000,
+};
+
 export function useRomanConverter(userInput: number | string) {
   let romanoNumbers = "";
 
@@ -10,15 +22,22 @@ export function useRomanConverter(userInput: number | string) {
     : Number(userInput);
 
   if (typeof userInputFiltered === "string") {
-    if (userInputFiltered === "III") {
-      romanoNumbers = "3";
-    } else if (userInputFiltered === "I") {
-      romanoNumbers = "1";
-    } else if (userInputFiltered === "V") {
-      romanoNumbers = "5";
-    } else {
-      romanoNumbers = "Sorry currently not implemented";
+    let total = 0;
+    let previousValue = 0;
+
+    for (let i = userInputFiltered.length - 1; i >= 0; i--) {
+      const currentRomanValue = userInputFiltered[i];
+      const arabicValue = romanValues[currentRomanValue];
+
+      if (arabicValue >= previousValue) {
+        total += arabicValue;
+      } else {
+        total -= arabicValue;
+      }
+      previousValue = arabicValue;
     }
+
+    return `${total}`;
   } else {
     while (userInputFiltered > 0) {
       if (userInputFiltered >= 1000) {
