@@ -14,16 +14,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set working directory
-        run: cd front
-
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 14
 
-      - name: Install dependencies
+      - name: Install dependencies in 'front' directory
         run: npm install
+        working-directory: front
 
-      - name: Run tests
+      - name: Run tests in 'front' directory
         run: npm run test
+        working-directory: front
