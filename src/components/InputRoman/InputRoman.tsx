@@ -58,11 +58,6 @@ function InputRoman() {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
 
-    console.log(
-      (!isNaN(Number(value)) && Number(value) < MAX_NUMBER) ||
-        checkInputChars(value.toUpperCase())
-    );
-
     if (
       (!isNaN(Number(value)) && Number(value) < MAX_NUMBER) ||
       checkInputChars(value.toUpperCase())
