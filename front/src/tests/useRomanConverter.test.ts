@@ -67,12 +67,23 @@ describe("useRomanConverter", () => {
 
     expect(result).toBe("M");
   });
+
+  it("should render a O with a 0", () => {
+    const result = useRomanConverter(0);
+
+    expect(result).toBe("O");
+  });
 });
 
 describe("useRomanConverterInverted", () => {
+  it("should render a 0 with a O", () => {
+    const result = useRomanConverter("O");
+
+    expect(result).toBe("0");
+  });
+
   it("should render a 1 with a I", () => {
     const result = useRomanConverter("I");
-
     expect(result).toBe("1");
   });
 

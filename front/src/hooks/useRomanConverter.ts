@@ -1,6 +1,7 @@
 type TRomanValue = Record<string, number>;
 
 const romanValues: TRomanValue = {
+  O: 0,
   I: 1,
   V: 5,
   X: 10,
@@ -13,8 +14,16 @@ const romanValues: TRomanValue = {
 export function useRomanConverter(userInput: number | string) {
   let romanoNumbers = "";
 
-  if (!isNaN(Number(userInput)) && !Number.isInteger(Number(userInput))) {
+  if (!userInput) {
     return;
+  }
+
+  if (!isNaN(Number(userInput)) && !Number.isInteger(Number(userInput))) {
+    return "Float number not implemented";
+  }
+
+  if (Number(userInput) === 0) {
+    return "O";
   }
 
   let userInputFiltered = isNaN(Number(userInput))
