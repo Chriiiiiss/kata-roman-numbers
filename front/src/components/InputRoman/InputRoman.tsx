@@ -78,7 +78,6 @@ function InputRoman() {
   }, [userInput]);
 
   const romanoConvertedNumber = useRomanConverter(debouncedUserInputValue);
-
   return (
     <CardWrapper>
       <Card>
@@ -88,9 +87,9 @@ function InputRoman() {
           value={userInput}
           onChange={handleInputChange}
         />
-        {inputError ? (
-          <ResultPlaceholder>Error</ResultPlaceholder>
-        ) : (
+        {inputError && <ResultPlaceholder>Bad Input</ResultPlaceholder>}
+
+        {userInput && !inputError && (
           <ResultPlaceholder>{romanoConvertedNumber}</ResultPlaceholder>
         )}
       </Card>

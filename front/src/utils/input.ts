@@ -6,5 +6,13 @@ export function checkInputChars(inputStr: string): boolean {
       return false;
     }
   }
+
+  if (!inputStr && isNaN(Number(inputStr))) {
+    return false;
+  }
+
+  if (!isNaN(Number(inputStr)) && !Number.isInteger(Number(inputStr))) {
+    return false;
+  }
   return true;
 }
