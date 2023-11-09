@@ -11,19 +11,19 @@ const romanValues: TRomanValue = {
   M: 1000,
 };
 
-export function useRomanConverter(userInput: number | string) {
+export function useRomanConverter(userInput: number | string): string {
   let romanoNumbers = "";
 
-  if (!userInput) {
-    return;
-  }
-
-  if (!isNaN(Number(userInput)) && !Number.isInteger(Number(userInput))) {
-    return "Float number not implemented";
+  if (!userInput && isNaN(Number(userInput))) {
+    return "Input non supporté";
   }
 
   if (Number(userInput) === 0) {
     return "O";
+  }
+
+  if (!isNaN(Number(userInput)) && !Number.isInteger(Number(userInput))) {
+    return "Float number not implemented";
   }
 
   let userInputFiltered = isNaN(Number(userInput))
