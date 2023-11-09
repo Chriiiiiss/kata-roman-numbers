@@ -4,12 +4,39 @@ import { useRomanConverter } from "../../hooks/useRomanConverter";
 import { checkInputChars } from "../../utils/input";
 import { MAX_NUMBER } from "../../utils/constants";
 
-const Card = styled.div`
-  background-color: blue;
+const CardWrapper = styled.div`
+  height:100%;
+  padding:50px 100px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.50);
+  box-shadow: 16px 16px 31px 0px rgba(0, 0, 0, 0.25);
 `;
 
-const ResultPlaceholder = styled.h1`
-  color: red;
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  input{
+    padding: 10px;
+    border: 2px solid transparent;
+    background-color: rgba(255, 255, 255, 0.50);
+    color: #000000;
+    border-radius: 16px;
+    box-shadow:0px 0px 30px rgba(255, 255, 255, 0.30);
+    text-align: center;
+
+  }
+  input:focus {
+    outline: none;
+    border: 2px solid #FFF;
+  }
+`;
+
+const ResultPlaceholder = styled.p`
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
 `;
 
 function InputRoman() {
@@ -47,18 +74,21 @@ function InputRoman() {
   const romanoConvertedNumber = useRomanConverter(debouncedUserInputValue);
 
   return (
-    <Card>
-      <input
-        placeholder="from 1 to 3999"
-        value={userInput}
-        onChange={handleInputChange}
-      />
+    <CardWrapper>
+        <Card>
+          <h2>Convert a Roman number to an Arabic number</h2>
+        <input
+          placeholder="from 1 to 3999"
+          value={userInput}
+          onChange={handleInputChange}
+        />
       {inputError ? (
-        <p>Error</p>
+        <ResultPlaceholder>Error</ResultPlaceholder>
       ) : (
-        <ResultPlaceholder>{romanoConvertedNumber}</ResultPlaceholder>
+          <ResultPlaceholder>{romanoConvertedNumber}</ResultPlaceholder>
       )}
-    </Card>
+      </Card>
+    </CardWrapper>
   );
 }
 
