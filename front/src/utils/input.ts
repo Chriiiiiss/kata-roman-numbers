@@ -1,4 +1,4 @@
-const AVAILABLE_CHARS = ["I", "V", "X", "L", "C", "D", "M"];
+const AVAILABLE_CHARS = ["I", "V", "X", "L", "C", "D", "M", "O"];
 
 export function checkInputChars(inputStr: string): boolean {
   for (const char of inputStr) {
