@@ -20,6 +20,11 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return { hello: 'world' }
+Route.get('/alive', async () => {
+  return { iam: 'alive' }
 })
+
+Route.group(() => {
+  Route.get('roman/:userInput', 'RomanController.convert')
+  Route.get('arabic/:userInput', 'RomanController.revert')
+}).prefix('/api')
