@@ -4,9 +4,7 @@ import InputRoman from "./components/InputRoman/InputRoman";
 function App() {
   return (
     <>
-      <div>
-        <InputRoman />
-      </div>
+      <InputRoman />
     </>
   );
 }
