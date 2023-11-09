@@ -5,7 +5,11 @@ import { checkInputChars } from "../../utils/input";
 import { MAX_NUMBER } from "../../utils/constants";
 
 const CardWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height:100%;
+  min-height: 200px;
   padding:50px 100px;
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.50);
@@ -16,21 +20,30 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   input{
     padding: 10px;
     border: 2px solid transparent;
     background-color: rgba(255, 255, 255, 0.50);
     color: #000000;
     border-radius: 16px;
-    box-shadow:0px 0px 30px rgba(255, 255, 255, 0.30);
     text-align: center;
+    transition: 0.3s;
+
 
   }
   input:focus {
     outline: none;
+    box-shadow:0px 0px 30px rgba(255, 255, 255, 0.50);
     border: 2px solid #FFF;
+    transition: 0.3s;
   }
+`;
+
+const Title = styled.h2`
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
 `;
 
 const ResultPlaceholder = styled.p`
@@ -76,9 +89,9 @@ function InputRoman() {
   return (
     <CardWrapper>
         <Card>
-          <h2>Convert a Roman number to an Arabic number</h2>
+          <Title>Convert a Roman number to an Arabic number</Title>
         <input
-          placeholder="from 1 to 3999"
+          placeholder="From 1 to 3999"
           value={userInput}
           onChange={handleInputChange}
         />
