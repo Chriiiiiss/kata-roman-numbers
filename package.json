@@ -1,10 +1,10 @@
 {
   "name": "life_cycle",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "RomanNumbers.js",
   "scripts": {
-    "test": "jest",
+    "test": "vitest --root src/",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -30,6 +30,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "jest": "^29.7.0",
+    "jsdom": "^22.1.0",
     "react-hooks-testing-library": "^0.6.0",
     "typescript": "^5.0.2",
     "vite": "^4.5.0",

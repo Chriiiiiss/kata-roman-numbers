@@ -4,9 +4,8 @@ import InputRoman from "./components/InputRoman/InputRoman";
 function App() {
   return (
     <>
-      <div>
-        <InputRoman />
-      </div>
+      <h1>Roman Numeral Converter</h1>
+      <InputRoman />
     </>
   );
 }
