@@ -16,6 +16,7 @@ export default class RomanController {
     let userInputFiltered: number = request.params().userInput
     let romanoNumbers = ''
 
+    console.log({ request })
     while (userInputFiltered > 0) {
       if (userInputFiltered >= 1000) {
         romanoNumbers = romanoNumbers + 'M'.repeat(userInputFiltered / 1000)
